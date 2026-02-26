@@ -443,7 +443,7 @@ export default function MeetingNotes() {
   const headings = active ? extractHeadings(active.content) : [];
 
   return (
-    <div style={{ display: "flex", height: "100vh", fontFamily: "'Geist Mono', monospace", background: "#f8fafc", overflow: "hidden" }}>
+    <div style={{ display: "flex", height: "100vh", width:'100vw', fontFamily: "'Geist Mono', monospace", background: "#f8fafc", overflow: "hidden" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Geist+Mono:wght@300;400;500;600&display=swap');
         * { box-sizing: border-box; margin:0; padding:0; }
@@ -461,7 +461,7 @@ export default function MeetingNotes() {
       `}</style>
 
       {/* ── SIDEBAR ── */}
-      <div style={{ width: 270, background: "#1e293b", color: "#e2e8f0", display: "flex", flexDirection: "column", flexShrink: 0 }}>
+      <div style={{ width: 350, background: "#1e293b", color: "#e2e8f0", display: "flex", flexDirection: "column", flexShrink: 0 }}>
         {/* Sidebar header */}
         <div style={{ padding: "18px 16px 14px", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 14 }}>

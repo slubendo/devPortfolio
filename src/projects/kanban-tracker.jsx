@@ -253,7 +253,7 @@ export default function KanbanTracker() {
   const progress   = Math.round(doneCount / cards.length * 100);
 
   return (
-    <div style={{ background: "#f0ede8", minHeight: "100vh", fontFamily: "'Barlow', sans-serif" }}>
+    <div style={{ background: "#f0ede8", minHeight: "100vh", minWidth:'100vw', fontFamily: "'Barlow', sans-serif" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&display=swap');
         * { box-sizing: border-box; margin:0; padding:0; }
@@ -319,7 +319,7 @@ export default function KanbanTracker() {
       </div>
 
       {/* ── BOARD ── */}
-      <div style={{ display: "flex", gap: 0, padding: 0, height: "calc(100vh - 77px)", overflowX: "auto" }}>
+      <div style={{ display: "flex", justifyContent:'space-between', gap: 0, padding: 0, height: "calc(100vh - 77px)", overflowX: "auto" }}>
         {COLUMNS.map((col, ci) => {
           const colCards = filtered.filter(c => c.col === col.id).sort((a, b) => {
             const pOrder = { critical: 0, high: 1, medium: 2, low: 3 };

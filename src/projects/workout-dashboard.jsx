@@ -346,7 +346,7 @@ export default function WorkoutDashboard() {
   const NAV = [["home","Home"],["history","History"],["progress","Progress"]];
 
   return (
-    <div style={{background:C.bg,minHeight:"100vh",color:C.white,fontFamily:"'Circular', 'DM Sans', sans-serif"}}>
+    <div style={{background:C.bg,minHeight:"100vh", minWidth:'100vw',color:C.white,fontFamily:"'Circular', 'DM Sans', sans-serif"}}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
         * { box-sizing:border-box; margin:0; padding:0; }

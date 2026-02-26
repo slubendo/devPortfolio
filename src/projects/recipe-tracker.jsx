@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 
-const CATEGORIES = ["Breakfast","Lunch","Dinner","Dessert","Snacks","Drinks","Vegetarian","Vegan","Baking"];
+const CATEGORIES = ["Breakfast","Lunch","Dinner","Dessert","Drinks","Vegetarian"];
 const DIFFICULTIES = ["Easy","Medium","Hard"];
 const CUISINES = ["Italian","Mexican","Asian","American","Mediterranean","Indian","French","Middle Eastern","Japanese","Other"];
 
@@ -569,7 +569,7 @@ export default function RecipeTracker() {
   const savedCount = recipes.filter(r => r.savedBy.includes(currentUser)).length;
 
   return (
-    <div style={{ background: "#f7f2eb", minHeight: "100vh", fontFamily: "'Work Sans', sans-serif", color: "#1a1008" }}>
+    <div style={{ background: "#f7f2eb", minHeight: "100vh", minWidth:'100vw', fontFamily: "'Work Sans', sans-serif", color: "#1a1008" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600;700&display=swap');
         * { box-sizing: border-box; margin:0; padding:0; }

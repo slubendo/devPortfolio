@@ -95,7 +95,7 @@ export default function WeeklyCalendar() {
   })();
 
   return (
-    <div style={{ fontFamily: "'Lora', serif", background: "#faf8f4", minHeight: "100vh", color: "#1a1008" }}>
+    <div style={{ fontFamily: "'Lora', serif", background: "#faf8f4", minHeight: "100vh", minWidth:'100vw', color: "#1a1008" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Epilogue:wght@300;400;500;600;700&display=swap');
         * { box-sizing: border-box; }

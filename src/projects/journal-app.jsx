@@ -183,7 +183,7 @@ export default function JournalApp() {
   const readEntry = entries.find(e => e.id === activeEntry);
 
   return (
-    <div style={{ fontFamily: "'Crimson Pro', serif", background: "#f7f0e6", minHeight: "100vh", color: "#2c1810" }}>
+    <div style={{ fontFamily: "'Crimson Pro', serif", background: "#f7f0e6", minHeight: "100vh", minWidth:'100vw', color: "#2c1810" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Petit+Formal+Script&family=Josefin+Sans:wght@300;400;500;600&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -272,7 +272,7 @@ export default function JournalApp() {
       <div style={{ display: "flex", height: "100vh", overflow: "hidden" }}>
 
         {/* Sidebar */}
-        <div style={{ width: 260, background: "#f0e6d6", borderRight: "1px solid #ddd0b8", display: "flex", flexDirection: "column", flexShrink: 0 }}>
+        <div style={{ width: 300, background: "#f0e6d6", borderRight: "1px solid #ddd0b8", display: "flex", flexDirection: "column", flexShrink: 0 }}>
           {/* Logo */}
           <div style={{ padding: "28px 24px 20px", borderBottom: "1px solid #ddd0b8" }}>
             <h1 style={{ fontFamily: "'Petit Formal Script', cursive", fontSize: 28, color: "#6b3f1c", lineHeight: 1.2 }}>My Journal</h1>
@@ -366,7 +366,7 @@ export default function JournalApp() {
 
           {/* ---- LIST VIEW ---- */}
           {view === "list" && (
-            <div style={{ maxWidth: 680, margin: "0 auto", padding: "40px 48px" }} className="fade-up">
+            <div style={{ maxWidth: 680, margin: "0 auto", padding: "40px 0px" }} className="fade-up">
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 32 }}>
                 <div>
                   <h2 style={{ fontFamily: "'Petit Formal Script', cursive", fontSize: 36, color: "#6b3f1c" }}>All Entries</h2>

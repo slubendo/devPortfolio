@@ -204,7 +204,7 @@ export default function GoalTracker() {
   const statsAvg = Math.round(goals.reduce((s, g) => s + Math.min(g.current / g.target, 1), 0) / goals.length * 100);
 
   return (
-    <div style={{ fontFamily: "'IBM Plex Mono', monospace", background: "#060d1a", minHeight: "100vh", color: "#e8f4ff" }}>
+    <div style={{ fontFamily: "'IBM Plex Mono', monospace", background: "#060d1a", minWidth:'100vw', minHeight: "100vh", color: "#e8f4ff" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -218,6 +218,7 @@ export default function GoalTracker() {
         select.form-input option { background: #0d1b2e; }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
       `}</style>
+
 
       {/* Header */}
       <div style={{ borderBottom: "1px solid rgba(255,255,255,0.06)", padding: "20px 32px", display: "flex", alignItems: "center", gap: 20, background: "rgba(0,0,0,0.3)", backdropFilter: "blur(10px)", position: "sticky", top: 0, zIndex: 50 }}>
