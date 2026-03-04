@@ -39,11 +39,70 @@ nav {
   border-bottom:1px solid var(--sand);
   height:64px;
 }
+
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;     
+}
+
+/* Logo image */
+.nav-logo-img {
+  width: 120px;            /* smaller size, adjust as needed */
+  height: 120px;
+  margin-right: 8px;    
+  color: var(--espresso); 
+}
+
+
+
+#projects {
+  scroll-margin-top: 70px;
+}
+
+.avatar-frame {
+  width: 90px;     /* smaller */
+  height: 90px;    /* smaller */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Horizontal social list without bullets */
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  display: flex;
+  gap: 8px;       /* more space between icons */
+  align-items: center;
+}
+
+/* Make icons significantly bigger */
+.social-link ion-icon {
+  font-size: 48px;          /* big size */
+  color: #6b4c3b;           /* icon color */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover ion-icon {
+  color: #6b4c3b;           /* hover color */
+  transform: scale(1.1);    /* pop effect on hover */
+}
+
 .nav-inner {
   display:flex;align-items:center;gap:0;
   width:100%;max-width:900px;
   justify-content:center;
   position:relative;
+    color: var(--espresso); 
+
 }
 .nav-logo {
   position:absolute;left:0;
@@ -51,7 +110,6 @@ nav {
   font-size:1.2rem;letter-spacing:0.15em;text-transform:uppercase;
   color:var(--espresso);cursor:pointer;
 }
-.nav-logo span{color:var(--rust);}
 .nav-links{display:flex;gap:0;list-style:none;}
 .nav-links li button{
   background:none;border:none;cursor:pointer;
@@ -727,10 +785,19 @@ nav {
 <body>
 
 <!-- ════ CENTERED NAV ════ -->
-<nav>
+
+<!-- <nav>
   <div class="nav-inner">
     <div class="nav-logo" onclick="go('home')">Stephane<span>.</span>Lubendo</div>
   </div>
+</nav> -->
+<nav>
+<div class="nav-inner" onclick="go('home')">
+  <div class="nav-logo">
+    <img src="../assets/logo.png" alt="" class="nav-logo-img" />
+    <span class="nav-logo-text">Stephane<span>.</span>Lubendo</span>
+  </div>
+</div>
 </nav>
 
 <!-- ════════════ HOME ════════════ -->
@@ -738,29 +805,29 @@ nav {
   <section class="home-hero">
     <div class="home-hero-left">
       <div><div class="hero-eyebrow">Available for work</div></div>
-      <div><h1 class="hero-name">Stephane<em>Lubendo.</em></h1></div>
-      <p class="hero-tagline">I'm a dedicated Full Stack Web Developer and Quality Assurance Engineer with a passion for transforming ideas into real-world applications. I specialize in building full-featured web solutions that are both highly functional and scalable. My portfolio showcases a selection of applications I've developed, reflecting my commitment to creative solutions, code quality, and professional development. A few of my favorite projects are featured below.
+      <div><h1 class="hero-name">Stephane<em>Lubendo</em></h1></div>
+      <p class="hero-tagline">I'm a dedicated Full Stack Software Engineer with a passion for transforming ideas into real world applications. I specialize in building web solutions that are functional and scalable.
+      </p>
+      <p class="hero-tagline">My portfolio showcases a selection of applications I've developed. These apps reflect my commitment to web solutions, and professional development. A few of my favorite projects are featured below.
       </p>
       <div class="hero-bottom-row">
-        <!-- <div class="hero-pills">
-          <button class="hero-pill hp-tech" onclick="go('tech')">Engineer</button>
-          <button class="hero-pill hp-write" onclick="go('writing')">Writer</button>
-          <button class="hero-pill hp-music" onclick="go('music')">Musician</button>
-        </div> -->
         <div class="hero-cta-group">
-          <button class="btn-filled" onclick="go('tech')">View Work</button>
-          <button class="btn-outline" onclick="go('about')">About</button>
+        <a href="#projects" class="btn-filled">
+          View Work
+        </a>       
         </div>
       </div>
     </div>
     <div class="home-hero-right">
       <div class="hero-avatar-block">
-        <div class="avatar-frame">👤</div>
+        <div class="avatar-frame">
+          <img src="../assets/stephanelubendo.jpg" alt="Stephane Lubendo" />
+        </div>
       </div>
       <div class="hero-stats-row">
-        <div class="hs-item"><div class="hs-num">12+</div><div class="hs-label">Yrs Engineering</div></div>
-        <div class="hs-item"><div class="hs-num">48</div><div class="hs-label">Articles</div></div>
-        <div class="hs-item"><div class="hs-num">3</div><div class="hs-label">Albums</div></div>
+        <div class="hs-item"><div class="hs-num">10+</div><div class="hs-label">Applications Built</div></div>
+        <div class="hs-item"><div class="hs-num">5</div><div class="hs-label">Years experience as Software Engineer</div></div>
+        <div class="hs-item"><div class="hs-num">3</div><div class="hs-label">Startups worked for </div></div>
       </div>
     </div>
   </section>
@@ -796,10 +863,10 @@ nav {
       <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--clay)"></div>ML / AI</div><div class="sk-row"><span>PyTorch</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:72%;background:var(--clay)"></div></div></div><div class="sk-row"><span>LLM Integration</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:88%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Diffusion Models</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:60%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Vector DBs</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:76%;background:var(--clay)"></div></div></div></div>
     </div>
     </div>
-  </div>
+  </div >
   <!-- ── ANIMATED COUNTER STRIP ── -->
-  <div class="home-counter-strip">
-    <div class="hcs-item">
+    <div class="home-counter-strip" id="projects">
+      <div class="hcs-item">
       <div class="hcs-num" data-target="12" data-suffix="+">0</div>
       <div class="hcs-label">Years Engineering</div>
       <div class="hcs-sub">Scaling systems from zero to millions of users across four companies.</div>
@@ -864,35 +931,42 @@ nav {
     </div>
   </div>
 
-  <!-- ── PARALLAX CALLOUT BAND ── -->
-  <!-- <div class="home-parallax-band" id="parallaxBand">
-    <div class="hpb-bg-circle hpb-c1" id="hpbc1"></div>
-    <div class="hpb-bg-circle hpb-c2" id="hpbc2"></div>
-    <div class="hpb-bg-circle hpb-c3" id="hpbc3"></div>
-    <div class="hpb-content">
-      <div class="hpb-eyebrow">Three disciplines. One obsession.</div>
-      <h2 class="hpb-headline">The best ideas live<br><em>between categories.</em></h2>
-      <p class="hpb-sub">Code that reads like poetry. Music that thinks like an algorithm. Essays that build arguments like software. The overlap is where all the interesting work happens.</p>
-      <div class="hpb-cta-row">
-        <button class="btn-filled" onclick="go('about')">Get to Know Me</button>
-        <button class="btn-ghost-cream" onclick="go('tech')">See the Work</button>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- ── FAQ ACCORDION ── -->
-
   <!-- ── CONTACT BAND ── -->
   <div class="home-contact">
     <div class="hc-text">
       <h2>Let's make<br><em>something.</em></h2>
-      <p>Whether it's a consulting conversation, a licensing question, or just a reader saying hello — my inbox is open. I reply to everything within 48 hours.</p>
+      <p>If you’re building something meaningful, exploring an idea, or just want to connect with someone who shares your curiosity and drive — let’s talk. I’m always open to thoughtful conversations, collaborations, and opportunities with like minded people.</p>
     </div>
     <div class="hc-links">
-      <button class="hc-link hcl-primary">hello@alexmorrow.io</button>
-      <button class="hc-link hcl-ghost" onclick="go('about')">View Full Bio</button>
-      <button class="hc-link hcl-ghost" onclick="go('music')">Stream Music</button>
-    </div>
+
+  <ul class="social-list">
+
+    <li class="social-item">
+      <a href="https://www.linkedin.com/in/stephanelubendo/" target="_blank" class="social-link">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </li>
+
+    <li class="social-item">
+      <a href="https://github.com/slubendo" target="_blank" class="social-link">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+    </li>
+    
+    <li class="social-item">
+      <a href="https://www.instagram.com/stephanelubendo/" target="_blank" class="social-link">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+    </li>
+    
+    <li class="social-item">
+      <a href="mailto:stephane.lubendo@gmail.com" class="social-link">
+        <ion-icon name="mail"></ion-icon>
+      </a>
+    </li>
+
+  </ul>
+</div>
   </div>
 
 </div><!-- end #home -->
@@ -1381,5 +1455,7 @@ document.head.insertAdjacentHTML('beforeend', `<style>
   .revealed { opacity: 1 !important; transform: translateY(0) !important; }
 </style>`);
 </script>
+<script type="module" src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
