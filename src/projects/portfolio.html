@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,16 +51,77 @@ nav {
 
 /* Logo image */
 .nav-logo-img {
-  width: 120px;            /* smaller size, adjust as needed */
-  height: 120px;
-  margin-right: 8px;    
+  width: 130px;            /* smaller size, adjust as needed */
+  height: 130px;
+  margin-right: 2px;  
+  margin-top: 2px;  
   color: var(--espresso); 
 }
 
+.hcs-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
+.hcs-top a{
+  text-decoration: none;
+  color: inherit; /* keeps the same text color */
+}
+
+.hc-text:hover{
+  opacity:1;
+}
+
+.hcs-top a{
+  text-decoration: none;
+  color: inherit;
+}
 
 #projects {
   scroll-margin-top: 70px;
+}
+
+.process-text p{
+  max-width: 460px;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.home-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* keeps things tight */
+  text-align: center;
+  gap: 0.8rem; /* smaller spacing between paragraph and links */
+  padding: 2rem 1rem;
+}
+
+.hc-links{
+  margin-top: 0.2rem;     /* pulls links closer */
+}  
+
+.social-list{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0.8rem;            
+  margin: 0;
+  padding: 0;
+}
+
+.process-text p{
+  margin-bottom: 0.5rem;  /* smaller space after paragraph */
+}
+
+.process-text h3{
+  color: var(--bark);
+  opacity: 1;
+}
+
+.process-text h3{
+  opacity: 1 !important;
 }
 
 .avatar-frame {
@@ -78,9 +141,8 @@ nav {
 .social-list {
   list-style: none;
   padding: 0;
-  margin: 20px;
   display: flex;
-  gap: 8px;       /* more space between icons */
+  gap: 4px;       /* more space between icons */
   align-items: center;
 }
 
@@ -296,7 +358,20 @@ nav {
 
 /* Music — process section */
 .music-process{padding:5rem 3.5rem;max-width:1200px;margin:0 auto;}
-.process-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.process-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:start;
+}.skills-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+
+.skill-group{
+  min-width:260px;
+}
 .process-text h3{font-family:var(--font-display);font-size:2.2rem;font-weight:700;line-height:1.1;margin-bottom:1.2rem;}
 .process-text h3 em{font-style:italic;color:var(--rust);}
 .process-text p{font-size:0.88rem;line-height:1.8;color:var(--bark);margin-bottom:1.2rem;}
@@ -318,7 +393,7 @@ nav {
 .press-eyebrow::after{content:'';flex:1;height:1px;background:rgba(245,240,232,0.1);}
 .press-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
 .press-card{border:1px solid rgba(245,240,232,0.1);border-radius:8px;padding:2rem;}
-.press-quote{font-family:var(--font-display);font-style:italic;font-size:1.05rem;line-height:1.6;color:var(--cream);margin-bottom:1.2rem;}
+.press-quote{font-family:var(--font-display);font-family: "calibri", sans-serif;font-size:1.0rem;line-height:1.8;color:var(--cream);margin-bottom:1.2rem;}
 .press-source{font-family:var(--font-cond);font-weight:700;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--clay);}
 
 /* Music — newsletter signup */
@@ -458,7 +533,7 @@ nav {
 
 /* ── Animated counter strip ── */
 .home-counter-strip{
-  display:grid;grid-template-columns:repeat(4,1fr);
+  display:grid;grid-template-columns:repeat(3,1fr);
   border-top:2px solid var(--espresso);
   border-bottom:1px solid var(--sand);
   background:var(--cream);
@@ -479,18 +554,36 @@ nav {
 .hcs-item:nth-child(1)::after{background:var(--moss);}
 .hcs-item:nth-child(2)::after{background:var(--ochre);}
 .hcs-item:nth-child(3)::after{background:var(--rust);}
-.hcs-item:nth-child(4)::after{background:var(--clay);}
+.hcs-item:nth-child(4)::after{background:var(--moss);}
+.hcs-item:nth-child(5)::after{background:var(--ochre);}
+.hcs-item:nth-child(6)::after{background:var(--rust);}
+.hcs-item:nth-child(7)::after{background:var(--moss);}
+.hcs-item:nth-child(8)::after{background:var(--ochre);}
+.hcs-item:nth-child(9)::after{background:var(--rust);}
 .hcs-num{
   font-family:var(--font-display);font-weight:700;
-  font-size:clamp(2.4rem,4vw,3.8rem);line-height:1;
+  font-size:clamp(1.0rem,3vw,2.8rem);line-height:1;
   letter-spacing:-0.03em;
 }
 .hcs-item:nth-child(1) .hcs-num{color:var(--moss);}
 .hcs-item:nth-child(2) .hcs-num{color:var(--ochre);}
 .hcs-item:nth-child(3) .hcs-num{color:var(--rust);}
-.hcs-item:nth-child(4) .hcs-num{color:var(--clay);}
-.hcs-label{font-size:0.72rem;color:var(--fog);margin-top:0.4rem;letter-spacing:0.06em;text-transform:uppercase;}
+.hcs-item:nth-child(4) .hcs-num{color:var(--moss);}
+.hcs-item:nth-child(5) .hcs-num{color:var(--ochre);}
+.hcs-item:nth-child(6) .hcs-num{color:var(--rust);}
+.hcs-item:nth-child(7) .hcs-num{color:var(--moss);}
+.hcs-item:nth-child(8) .hcs-num{color:var(--ochre);}
+.hcs-item:nth-child(9) .hcs-num{color:var(--rust);}
+.hcs-label{font-size:0.72rem;color:var(--bark);margin-top:0.4rem;letter-spacing:0.06em;text-transform:uppercase;}
 .hcs-sub{font-size:0.75rem;color:var(--bark);margin-top:0.6rem;line-height:1.5;}
+
+.hcs-item {
+  position: relative;
+  padding: 20px;
+}
+
+
+
 
 /* ── Tabbed spotlight ── */
 .home-spotlight{
@@ -726,14 +819,32 @@ nav {
 /* ── Contact band ── */
 .home-contact{
   background:var(--sand);
-  padding:5rem 3.5rem;
   display:flex;align-items:center;justify-content:space-between;
   gap:3rem;flex-wrap:wrap;
   border-top:1px solid var(--clay);
+  }
+.hc-text h2{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.7rem;          /* much smaller */
+  line-height: 1;
+  letter-spacing: 0.08em;     /* modern UI spacing */
+  margin: 0;
+  text-transform: uppercase;  /* modern UI look */
 }
-.hc-text h2{font-family:var(--font-display);font-weight:700;font-size:2.2rem;line-height:1.1;letter-spacing:-0.02em;margin-bottom:0.6rem;}
-.hc-text h2 em{font-style:italic;color:var(--rust);}
-.hc-text p{font-size:0.88rem;color:var(--bark);max-width:420px;line-height:1.7;}
+
+.hc-text h2 em{
+  font-style: normal;
+  color: var(--rust);         /* accent color */
+}
+
+.hcs-top a{
+  text-decoration: none;      /* remove underline */
+}
+
+.hcs-top a:hover em{
+  opacity: 0.8;
+}
 .hc-links{display:flex;gap:0.75rem;flex-wrap:wrap;}
 .hc-link{
   font-family:var(--font-cond);font-weight:700;font-size:0.75rem;
@@ -782,19 +893,13 @@ nav {
 }
 </style>
 </head>
-<body>
+<body id="root">
 
 <!-- ════ CENTERED NAV ════ -->
 
-<!-- <nav>
-  <div class="nav-inner">
-    <div class="nav-logo" onclick="go('home')">Stephane<span>.</span>Lubendo</div>
-  </div>
-</nav> -->
 <nav>
 <div class="nav-inner" onclick="go('home')">
   <div class="nav-logo">
-    <img src="../assets/logo.png" alt="" class="nav-logo-img" />
     <span class="nav-logo-text">Stephane<span>.</span>Lubendo</span>
   </div>
 </div>
@@ -842,72 +947,228 @@ nav {
   </div>  
 
   <!-- 4. PROCESS SECTION -->
+
   <div class="music-process">
-    <div class="process-grid">
-      <div class="process-text">
-        <h3>Built after<br><em>midnight.</em></h3>
-        <p>I'm a Full Stack Web Developer and Quality Assurance Engineer with a deep passion for problem-solving and creating tangible results. Early on in my academic career, I realized that I enjoyed problem solving in science and math. However, most of the problem solving was mainly theoretical. Looking for a career that had problem solving and real tangible application, led to my passion as a web developer.</p>
-        <p>Most recently, I refined my skills as a developer at the British Columbia Institute of Technology, where I study Full Stack Web Development. This program gave me real hands-on work experience with employers. While at BCIT, I gained work experience at my internship with Evolve Creative Solutions where I worked as a Full Stack Web Developer using Javascript, React, Tailwind, Node.js.</p>
-         <div class="timeline">
-          <div class="tl-head">Career Timeline</div>
-          <div class="tl-item"><div class="tl-dot" style="background:var(--rust);border-color:var(--rust)"></div><div><div class="tl-year">2024 → Present</div><div class="tl-role">Independent Contractor</div><div class="tl-co">Open source · Writing · Music</div></div></div>
-          <div class="tl-item"><div class="tl-dot" style="background:var(--ochre);border-color:var(--ochre)"></div><div><div class="tl-year">2021 → 2024</div><div class="tl-role">Software Engineer</div><div class="tl-co">Linear</div></div></div>
-          <div class="tl-item"><div class="tl-dot" style="background:var(--moss);border-color:var(--moss)"></div><div><div class="tl-year">2019 → 2021</div><div class="tl-role">Full-Stack Web Development</div><div class="tl-co">Vercel</div></div></div>
-          <div class="tl-item"><div class="tl-dot" style="background:var(--clay);border-color:var(--clay)"></div><div><div class="tl-year">2016 → 2019</div><div class="tl-role">Intern Web Developer</div><div class="tl-co">Codex (acq. 2022)</div></div></div>
+  <div class="process-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="process-text">
+      <h3>Languages & frameworks<br><em>I've worked with.</em></h3>
+
+      <p>
+I’ve worked with a variety of programming languages depending on the needs of the company and project. I’m most comfortable with TypeScript, C#, and Python, and I regularly work with PostgreSQL as a primary database for building reliable, data-driven applications.      </p>
+
+      <p>
+Each language serves a different purpose in my workflow. I typically use C# for scalable, enterprise-level applications, TypeScript for quickly building full-stack MVPs and modern web interfaces, and Python for applications that process or analyze large datasets. This flexibility allows me to choose the right tool for the problem while maintaining clean, maintainable systems.      </p>
+
+      <div class="timeline">
+        <div class="tl-head">Career Timeline</div>
+
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--rust);border-color:var(--rust)"></div>
+          <div>
+            <div class="tl-year">2023 → Present</div>
+            <div class="tl-role">Independent Contractor</div>
+            <div class="tl-co">OpenBankr</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--ochre);border-color:var(--ochre)"></div>
+          <div>
+            <div class="tl-year">2023 → 2025</div>
+            <div class="tl-role">Software Engineer</div>
+            <div class="tl-co">Eye Photo Systems</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--moss);border-color:var(--moss)"></div>
+          <div>
+            <div class="tl-year">2023 → 2024</div>
+            <div class="tl-role">Full-Stack Web Development</div>
+            <div class="tl-co">Evolve Creative Solutions</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--clay);border-color:var(--clay)"></div>
+          <div>
+            <div class="tl-year">2022 → 2023</div>
+            <div class="tl-role">Set Representative</div>
+            <div class="tl-co">BCIT</div>
+          </div>
         </div>
       </div>
-    <div class="process-grid">
-      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--moss)"></div>Languages</div><div class="sk-row"><span>Rust</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:95%;background:var(--moss)"></div></div></div><div class="sk-row"><span>TypeScript</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:92%;background:var(--moss)"></div></div></div><div class="sk-row"><span>Go</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:80%;background:var(--moss)"></div></div></div><div class="sk-row"><span>Python</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:75%;background:var(--moss)"></div></div></div></div>
-      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--ochre)"></div>Frontend</div><div class="sk-row"><span>React / Next.js</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:94%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>WebAssembly</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:78%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>CSS / Animation</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:88%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>Web Audio API</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:70%;background:var(--ochre)"></div></div></div></div>
-      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--rust)"></div>Backend &amp; Infra</div><div class="sk-row"><span>Distributed Systems</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:85%;background:var(--rust)"></div></div></div><div class="sk-row"><span>Kubernetes / Docker</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:82%;background:var(--rust)"></div></div></div><div class="sk-row"><span>PostgreSQL / SQLite</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:90%;background:var(--rust)"></div></div></div><div class="sk-row"><span>AWS / GCP</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:78%;background:var(--rust)"></div></div></div></div>
-      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--clay)"></div>ML / AI</div><div class="sk-row"><span>PyTorch</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:72%;background:var(--clay)"></div></div></div><div class="sk-row"><span>LLM Integration</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:88%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Diffusion Models</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:60%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Vector DBs</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:76%;background:var(--clay)"></div></div></div></div>
     </div>
+    <div class="skills-grid">
+      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--moss)"></div>Languages</div><div class="sk-row"><span>Javascript</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:95%;background:var(--moss)"></div></div></div><div class="sk-row"><span>TypeScript</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:92%;background:var(--moss)"></div></div></div><div class="sk-row"><span>Python</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:80%;background:var(--moss)"></div></div></div><div class="sk-row"><span>C#</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:75%;background:var(--moss)"></div></div></div><div class="sk-row"><span>Php</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:92%;background:var(--moss)"></div></div></div><div class="sk-row"><span>Java</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:92%;background:var(--moss)"></div></div></div><div class="sk-row"><span>C++</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:92%;background:var(--moss)"></div></div></div></div>
+      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--ochre)"></div>Frameworks</div><div class="sk-row"><span>React / Next.js</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:94%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>ASP.Net</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:78%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>Laravel</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:88%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>Node.js</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:70%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>Zustand</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:78%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>Socket.io</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:78%;background:var(--ochre)"></div></div></div><div class="sk-row"><span>Vue</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:78%;background:var(--ochre)"></div></div></div></div>
+      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--rust)"></div>Database</div><div class="sk-row"><span>PostgreSQL</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:85%;background:var(--rust)"></div></div></div><div class="sk-row"><span>MySQL</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:82%;background:var(--rust)"></div></div></div><div class="sk-row"><span>MongoDB</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:90%;background:var(--rust)"></div></div></div><div class="sk-row"><span>MariaDB</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:78%;background:var(--rust)"></div></div></div></div>
+      <div class="skill-group"><div class="sg-head"><div class="sg-dot" style="background:var(--clay)"></div>Others</div><div class="sk-row"><span>AWS</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:72%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Azure</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:88%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Git</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:60%;background:var(--clay)"></div></div></div><div class="sk-row"><span>HTML & CSS</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:76%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Kubernetes</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:72%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Docker</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:72%;background:var(--clay)"></div></div></div><div class="sk-row"><span>Drizzle</span><div class="sk-bar-bg"><div class="sk-bar-fill" style="width:72%;background:var(--clay)"></div></div></div></div>
     </div>
+  </div>
   </div >
   <!-- ── ANIMATED COUNTER STRIP ── -->
     <div class="home-counter-strip" id="projects">
-      <div class="hcs-item">
-      <div class="hcs-num" data-target="12" data-suffix="+">0</div>
-      <div class="hcs-label">Years Engineering</div>
-      <div class="hcs-sub">Scaling systems from zero to millions of users across four companies.</div>
+    <div class="hcs-item">
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Goals</div>
+
+         <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Goal tracking app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
     </div>
     <div class="hcs-item">
-      <div class="hcs-num" data-target="48" data-suffix="">0</div>
-      <div class="hcs-label">Articles Published</div>
-      <div class="hcs-sub">From deep technical dives to essays on creative process & culture.</div>
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Journal</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Journaling app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
+    </div><div class="hcs-item">
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Kanban app</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Kanban project manager app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
+    </div><div class="hcs-item">
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Meeting Notes</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Note taking app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
+    </div><div class="hcs-item">
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Recipe</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Recipe app to share recipes </div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
+    </div><div class="hcs-item">
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Study</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Study timer app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
+    </div><div class="hcs-item">
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Task</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Task managing app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
+    </div><div class="hcs-item">
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Planner</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Weekly planning app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
+    </div><div class="hcs-item">
+
+      <div class="hcs-top">
+        <div class="hcs-num" data-suffix="">IT Workout</div>
+
+        <a href="">
+          <div class="hc-text">
+            <h2><em>visit app</em></h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="hcs-label">Workout tracking app</div>
+      <div class="hcs-sub">
+        From deep technical dives to essays on creative process & culture.
+      </div>
+
     </div>
-    <div class="hcs-item">
-      <div class="hcs-num" data-target="32" data-suffix="">0</div>
-      <div class="hcs-label">Tracks Released</div>
-      <div class="hcs-sub">Three independent albums, two EPs, all produced at home after midnight.</div>
-    </div>
-    <div class="hcs-item">
-      <div class="hcs-num" data-target="14" data-suffix="k">0</div>
-      <div class="hcs-label">Monthly Listeners</div>
-      <div class="hcs-sub">Growing audience across Spotify, Bandcamp, and SoundCloud.</div>
-    </div>
-  </div>
-    <div class="home-counter-strip">
-    <div class="hcs-item">
-      <div class="hcs-num" data-target="12" data-suffix="+">0</div>
-      <div class="hcs-label">Years Engineering</div>
-      <div class="hcs-sub">Scaling systems from zero to millions of users across four companies.</div>
-    </div>
-    <div class="hcs-item">
-      <div class="hcs-num" data-target="48" data-suffix="">0</div>
-      <div class="hcs-label">Articles Published</div>
-      <div class="hcs-sub">From deep technical dives to essays on creative process & culture.</div>
-    </div>
-    <div class="hcs-item">
-      <div class="hcs-num" data-target="32" data-suffix="">0</div>
-      <div class="hcs-label">Tracks Released</div>
-      <div class="hcs-sub">Three independent albums, two EPs, all produced at home after midnight.</div>
-    </div>
-    <div class="hcs-item">
-      <div class="hcs-num" data-target="14" data-suffix="k">0</div>
-      <div class="hcs-label">Monthly Listeners</div>
-      <div class="hcs-sub">Growing audience across Spotify, Bandcamp, and SoundCloud.</div>
-    </div>
+
+
+
+
   </div>
 
 
@@ -916,16 +1177,16 @@ nav {
       <div class="press-eyebrow">What people are saying</div>
       <div class="press-grid">
         <div class="press-card">
-          <div class="press-quote">"Morrow's sound sits in the exact space between code and composition — technical, yet breathing."</div>
-          <div class="press-source">— Electronic Sounds Magazine</div>
+          <div class="press-quote">"His willingness to collaborate and communicate effectively within a team not only enhances the quality of his own work but also contributes to the success of the entire team."</div>
+          <div class="press-source">— Armaan Dhanji</div>
         </div>
         <div class="press-card">
-          <div class="press-quote">"Signal / Noise is the rare ambient album that rewards headphones and open spaces equally."</div>
-          <div class="press-source">— Pitchfork Adjacent Newsletter</div>
+          <div class="press-quote">"Stephane's dedication and problem-solving skills enhanced our team's performance. He consistently approached challenges with a proactive attitude and played a crucial role in project success. I recommend Stephane for any role that demands a collaborator with solid backend development and database skills."</div>
+          <div class="press-source">— Brett Gill</div>
         </div>
         <div class="press-card">
-          <div class="press-quote">"An engineer who makes music that sounds like what thinking feels like at 2am."</div>
-          <div class="press-source">— Resident Advisor Community</div>
+          <div class="press-quote">"Stephane stood out as an engaged student in my Web Data Technologies class, showcasing an impressive understanding of MySQL."</div>
+          <div class="press-source">— Patrick Guichon</div>
         </div>
       </div>
     </div>
@@ -933,12 +1194,13 @@ nav {
 
   <!-- ── CONTACT BAND ── -->
   <div class="home-contact">
-    <div class="hc-text">
-      <h2>Let's make<br><em>something.</em></h2>
+    <div class="hc-text process-text">
+      <h3>Want to make something<br><em>Let's connect</em></h3>
+
       <p>If you’re building something meaningful, exploring an idea, or just want to connect with someone who shares your curiosity and drive — let’s talk. I’m always open to thoughtful conversations, collaborations, and opportunities with like minded people.</p>
     </div>
-    <div class="hc-links">
 
+  <!-- <div class="hc-links"> -->
   <ul class="social-list">
 
     <li class="social-item">
@@ -964,9 +1226,9 @@ nav {
         <ion-icon name="mail"></ion-icon>
       </a>
     </li>
-
   </ul>
-</div>
+<!-- </div> -->
+
   </div>
 
 </div><!-- end #home -->
@@ -1457,5 +1719,6 @@ document.head.insertAdjacentHTML('beforeend', `<style>
 </script>
 <script type="module" src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.js"></script>
+<script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

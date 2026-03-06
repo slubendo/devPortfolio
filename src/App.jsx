@@ -9,6 +9,7 @@ import StudyTracker from './projects/study-tracker'
 import TaskFlow from './projects/task-flow'
 import WeeklyCalendar from './projects/weekly-calendar'
 import WorkoutDashboard from './projects/workout-dashboard'
+import Home from './Home'
 
 
 
@@ -22,8 +23,8 @@ function App() {
    <BrowserRouter>
     <main>
       <Routes>
-        <Route path='/' element={<StudyTracker />}></Route>
-        <Route path='/goal-tracker' element={<GoalTracker/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/goal-tracker  ' element={<GoalTracker/>}></Route>
         <Route path='/journal-app' element={<JournalApp />}></Route>
         <Route path='/kanban-tracker' element={<KanbanTracker/>}></Route>
         <Route path='/meeting-notes/' element={<MeetingNotes/>}></Route>
