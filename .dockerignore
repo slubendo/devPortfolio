@@ -1,0 +1,6 @@
+fly.toml
+node_modules
+.git
+dist
+.env
+*.log

@@ -192,7 +192,7 @@ export default function Home() {
           <div className="home-hero-right">
             <div className="hero-avatar-block">
               <div className="avatar-frame">
-                <img src="/src/assets/stephanelubendo.jpg" alt="Stephane Lubendo" />
+                <img src="/stephanelubendo.jpg" alt="Stephane Lubendo" />
               </div>
             </div>
             <div className="hero-stats-row">
@@ -328,7 +328,7 @@ export default function Home() {
             <div className="hcs-item" key={path}>
               <div className="hcs-top">
                 <div className="hcs-num">{title}</div>
-                <Link to={path}>
+                <Link to={path} target="_blank" rel="noreferrer">
                   <div className="hc-text"><h2><em>visit app</em></h2></div>
                 </Link>
               </div>
@@ -367,7 +367,7 @@ export default function Home() {
           </div>
           <ul className="social-list">
             <li className="social-item">
-              <a href="https://www.linkedin.com/in/stephanelubendo/" target="_blank" rel="noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/in/stephanelubendo/"  rel="noreferrer" className="social-link">
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
