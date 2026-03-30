@@ -120,45 +120,45 @@ export default function Home() {
     }
   }, [])
 
-  const filterFeed = (type, btn) => {
-    document.querySelectorAll('.nf-filter').forEach(b => b.classList.remove('active'))
-    btn.classList.add('active')
-    document.querySelectorAll('#feedGrid .nf-card').forEach(card => {
-      card.style.display = (type === 'all' || card.dataset.type === type) ? '' : 'none'
-    })
-  }
+  // const filterFeed = (type, btn) => {
+  //   document.querySelectorAll('.nf-filter').forEach(b => b.classList.remove('active'))
+  //   btn.classList.add('active')
+  //   document.querySelectorAll('#feedGrid .nf-card').forEach(card => {
+  //     card.style.display = (type === 'all' || card.dataset.type === type) ? '' : 'none'
+  //   })
+  // }
 
-  const toggleFaq = (btn) => {
-    const item = btn.closest('.faq-item')
-    const isOpen = item.classList.contains('open')
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'))
-    if (!isOpen) item.classList.add('open')
-  }
+  // const toggleFaq = (btn) => {
+  //   const item = btn.closest('.faq-item')
+  //   const isOpen = item.classList.contains('open')
+  //   document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'))
+  //   if (!isOpen) item.classList.add('open')
+  // }
 
-  const wheelLabels = {
-    'Rust': { label: 'Language', val: '6+', sub: 'Years with Rust' },
-    'TypeScript': { label: 'Language', val: '9+', sub: 'Years with TS' },
-    'Go': { label: 'Language', val: '5+', sub: 'Years with Go' },
-    'React': { label: 'Frontend', val: '8+', sub: 'Years with React' },
-    'WASM': { label: 'Frontend', val: '3+', sub: 'Years with WASM' },
-    'Distributed Sys': { label: 'Backend', val: '8+', sub: 'Years at scale' },
-    'PostgreSQL': { label: 'Backend', val: '10+', sub: 'Years with SQL' },
-    'Ableton': { label: 'Creative', val: '7+', sub: 'Years producing' },
-    'Modular Synth': { label: 'Creative', val: '4+', sub: 'Years patching' },
-    'Long-form Writing': { label: 'Creative', val: '5+', sub: 'Years publishing' },
-    'Python': { label: 'Language', val: '8+', sub: 'Years with Python' },
-    'Kubernetes': { label: 'Backend', val: '6+', sub: 'Years deploying' }
-  }
+  // const wheelLabels = {
+  //   'Rust': { label: 'Language', val: '6+', sub: 'Years with Rust' },
+  //   'TypeScript': { label: 'Language', val: '9+', sub: 'Years with TS' },
+  //   'Go': { label: 'Language', val: '5+', sub: 'Years with Go' },
+  //   'React': { label: 'Frontend', val: '8+', sub: 'Years with React' },
+  //   'WASM': { label: 'Frontend', val: '3+', sub: 'Years with WASM' },
+  //   'Distributed Sys': { label: 'Backend', val: '8+', sub: 'Years at scale' },
+  //   'PostgreSQL': { label: 'Backend', val: '10+', sub: 'Years with SQL' },
+  //   'Ableton': { label: 'Creative', val: '7+', sub: 'Years producing' },
+  //   'Modular Synth': { label: 'Creative', val: '4+', sub: 'Years patching' },
+  //   'Long-form Writing': { label: 'Creative', val: '5+', sub: 'Years publishing' },
+  //   'Python': { label: 'Language', val: '8+', sub: 'Years with Python' },
+  //   'Kubernetes': { label: 'Backend', val: '6+', sub: 'Years deploying' }
+  // }
 
-  const pickSkill = (el) => {
-    document.querySelectorAll('.skill-tag').forEach(t => t.classList.remove('picked'))
-    el.classList.add('picked')
-    const name = el.textContent.trim()
-    const info = wheelLabels[name] || { label: 'Skill', val: '—', sub: name }
-    document.getElementById('wheelLabel').textContent = info.label
-    document.getElementById('wheelVal').textContent = info.val
-    document.getElementById('wheelSub').textContent = info.sub
-  }
+  // const pickSkill = (el) => {
+  //   document.querySelectorAll('.skill-tag').forEach(t => t.classList.remove('picked'))
+  //   el.classList.add('picked')
+  //   const name = el.textContent.trim()
+  //   const info = wheelLabels[name] || { label: 'Skill', val: '—', sub: name }
+  //   document.getElementById('wheelLabel').textContent = info.label
+  //   document.getElementById('wheelVal').textContent = info.val
+  //   document.getElementById('wheelSub').textContent = info.sub
+  // }
 
   return (
     <>
@@ -205,7 +205,7 @@ export default function Home() {
 
         <div className="marquee-strip">
           <div className="marquee-inner">
-            <span>Software Engineering</span><span className="dot">✦</span><span>Javascript</span><span className="dot">✦</span><span>Node.js</span><span className="dot">✦</span><span>TypeScript</span><span className="dot">✦</span><span>MongoDB</span><span className="dot">✦</span><span>React</span><span className="dot">✦</span><span>CSS &amp; HTML</span><span className="dot">✦</span><span>Next</span>
+            <span>Software Engineering</span><span className="dot">✦</span><span>Javascript</span><span className="dot">✦</span><span>Node.js</span><span className="dot">✦</span><span>TypeScript</span><span className="dot">✦</span><span>MongoDB</span><span className="dot">✦</span><span>React</span><span className="dot">✦</span><span>CSS &amp; HTML</span><span className="dot">✦</span><span>Next</span><span className="dot">✦</span>
             <span>Full-Stack Web Development</span><span className="dot">✦</span><span>Python</span><span className="dot">✦</span><span>Php</span><span className="dot">✦</span><span>SQL</span><span className="dot">✦</span><span>AWS</span><span className="dot">✦</span><span>Wordpress</span><span className="dot">✦</span><span>C# &amp; ASP.Net</span><span className="dot">✦</span><span>Available for Consulting</span><span className="dot">✦</span>
           </div>
         </div>

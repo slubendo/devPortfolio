@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import JournalApp from './projects/journal-app'
 import GoalTracker from './projects/goal-tracker'
@@ -14,7 +13,6 @@ import Home from './Home'
 
 
 function App() {
-  const [count, setCount] = useState(0)
   
 
 
@@ -24,7 +22,7 @@ function App() {
     <main>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/goal-tracker  ' element={<GoalTracker/>}></Route>
+        <Route path='/goal-tracker' element={<GoalTracker/>}></Route>
         <Route path='/journal-app' element={<JournalApp />}></Route>
         <Route path='/kanban-tracker' element={<KanbanTracker/>}></Route>
         <Route path='/meeting-notes/' element={<MeetingNotes/>}></Route>
